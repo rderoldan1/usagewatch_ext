@@ -20,7 +20,7 @@ gem install usagewatch_ext
 ```ruby
 require 'usagewatch_ext'
 
-usw = UsagewatchExt
+usw = Usagewatch
 
 usw.uw_diskused
 usw.uw_diskused_perc
