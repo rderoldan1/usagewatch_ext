@@ -4,7 +4,7 @@
 
 require 'usagewatch_ext'
 
-usw =  UsagewatchExt
+usw =  Usagewatch
 
 puts "#{usw.uw_diskused} Gigabytes Used"
 puts "#{usw.uw_diskused_perc} Percentage of Gigabytes Used"

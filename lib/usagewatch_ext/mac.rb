@@ -1,4 +1,4 @@
-module UsagewatchExt
+module Usagewatch
 
   # Show disk used in GB
   def self.uw_diskused
