@@ -4,7 +4,7 @@
 
 # usagewatch extended version
 
-License: (MIT) Copyright (C) 2013 Author Ruben Espinosa.
+License: (MIT) Copyright (C) 2013 Authors Ruben Espinosa, Phil Chen.
 
 ## DESCRIPTION:
 This project is based in [Usagewatch](https://github.com/rderoldan1/nethacker/usagewatch) gem written by Phil Chen, I try to expand the OS version, first with mac OS,
