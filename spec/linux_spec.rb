@@ -1,8 +1,7 @@
 require 'rspec'
 require 'spec_helper'
 
-os = RUBY_PLATFORM
-if os.include? "linux"
+if OS.include? "linux"
   describe 'TCPConnectios' do
     it 'should TCP Connections Used' do
       a = Usagewatch.uw_tcpused
