@@ -6,7 +6,7 @@ require 'usagewatch_ext/version'
 Gem::Specification.new do |spec|
   spec.name          = "usagewatch_ext"
   spec.version       = UsagewatchExt::VERSION
-  spec.authors       = ["Ruben Espinosa"]
+  spec.authors       = ["Ruben Espinosa, Phil Chen"]
   spec.email         = ["rderoldan1@gmail.com"]
   spec.description   = %q{A Ruby Gem with methods to find usage statistics such as CPU, Disk, TCP/UDP Connections, Load, Bandwidth, Disk I/O, and Memory}
   spec.summary       = %q{Extended version of usagewatch}
