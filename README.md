@@ -7,8 +7,10 @@
 License: (MIT) Copyright (C) 2013 Authors Ruben Espinosa, Phil Chen.
 
 ## DESCRIPTION:
-This project is based in [Usagewatch](https://github.com/rderoldan1/nethacker/usagewatch) gem written by Phil Chen, I try to expand the OS version, first with mac OS,
+This project is based in [Usagewatch](https://github.com/rderoldan1/nethacker/usagewatch) gem written by Phil Chen, I try to expand the OS support, first with mac OS,
 in future versions Windows will be include.
+
+Also I am writing a testing library for the original gem.
 
 This is Ruby Gem with methods to find usage statistics on your system such as CPU, Disk, TCP/UDP Connections, Load,
 Bandwidth, Disk I/O, and Memory, top processes by memory and cpu consumption
