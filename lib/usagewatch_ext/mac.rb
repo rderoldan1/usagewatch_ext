@@ -38,13 +38,7 @@ module Usagewatch
   # return hash of top ten proccesses by cpu consumption
   # example [["apache2", 12.0], ["passenger", 13.2]]
   def self.uw_cputop
-    ps = `ps aux | awk '{print $11, $3}' | sort -k2nr  | head -n 10`
-    array = []
-    ps.each_line do |line|
-      line = line.chomp.split(" ")
-      array << [line.first.gsub(/[\[\]]/, "").split("/").last, line.last]
-    end
-    array
+    top %w"$11 $3"
   end
 
   # todo
@@ -60,13 +54,7 @@ module Usagewatch
   # return hash of top ten proccesses by mem consumption
   # example [["apache2", 12.0], ["passenger", 13.2]]
   def self.uw_memtop
-    ps = `ps aux | awk '{print $11, $4}' | sort -k2nr  | head -n 10`
-    array = []
-    ps.each_line do |line|
-      line = line.chomp.split(" ")
-      array << [line.first.gsub(/[\[\]]/, "").split("/").last, line.last]
-    end
-    array
+    top %w"$11 $4"
   end
 
   # Percentage of mem used
@@ -106,4 +94,16 @@ module Usagewatch
   #def uw_diskiowrites
   #
   #end
+
+  private
+
+  def self.top(lines)
+    ps = `ps aux | awk '{print #{lines.join(", ")}}' | sort -k2nr  | head -n 10`
+    array = []
+    ps.each_line do |line|
+      line = line.chomp.split(" ")
+      array << [line.first.gsub(/[\[\]]/, "").split("/").last, line.last]
+    end
+    array
+  end
 end
