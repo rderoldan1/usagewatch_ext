@@ -1,6 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/rderoldan1/usagewatch_ext/badge.png)](https://coveralls.io/r/rderoldan1/usagewatch_ext)
 [![Gem Version](https://badge.fury.io/rb/usagewatch_ext.png)](http://badge.fury.io/rb/usagewatch_ext)
 [![Build Status](https://travis-ci.org/rderoldan1/usagewatch_ext.png?branch=master)](https://travis-ci.org/rderoldan1/usagewatch_ext)
+[![Code Climate](https://codeclimate.com/github/rderoldan1/usagewatch_ext.png)](https://codeclimate.com/github/rderoldan1/usagewatch_ext)
 
 # usagewatch extended version
 
