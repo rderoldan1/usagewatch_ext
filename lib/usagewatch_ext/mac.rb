@@ -15,13 +15,12 @@ module Usagewatch
 
   # Show the percentage of disk used.
   def self.uw_diskused_perc
-    df = `df -kl`
-    total, used  = 0.0, 0.0
+    df, total, used  = `df -kl`, 0.0, 0.0
     df.each_line.with_index do |line, line_index|
       line = line.split(" ")
       next if line_index.eql? 0 or line[0] =~ /localhost/ #ignore backup filesystem
-      total  += ((line[3].to_f)/1024)/1024
-      used   +=((line[2].to_f)/1024)/1024
+      total  += to_gb line[3].to_f
+      used   += to_gb line[2].to_f
     end
     ((used/total) * 100).round(2)
   end
@@ -103,5 +102,9 @@ module Usagewatch
       array << [line.first.gsub(/[\[\]]/, "").split("/").last, line.last]
     end
     array
+  end
+
+  def self.to_gb(bytes)
+    (bytes/1024)/1024
   end
 end
