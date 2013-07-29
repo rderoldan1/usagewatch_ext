@@ -92,7 +92,13 @@ module Usagewatch
   #
   #end
 
+  # Show the current http connections on 80 port
+  def self.uw_httpconns
+    `netstat -an | grep :80 |wc -l`.to_i
+  end
+
   private
+
 
   def self.top(lines)
     ps = `ps aux | awk '{print #{lines.join(", ")}}' | sort -k2nr  | head -n 10`

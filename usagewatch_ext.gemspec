@@ -14,6 +14,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.rdoc_options << '--main' << 'README'
 
+  spec.post_install_message = "* Usagewatch Gem for linux are covered for our test.\n* Mac OS version is in development\nThanks for installing!"
+
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})

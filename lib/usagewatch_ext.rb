@@ -8,6 +8,7 @@ module UsagewatchExt
     puts "Mac version is under development"
   elsif OS.include? "linux"
     require "usagewatch/linux"
+    require "usagewatch_ext/linux"
     UsagewatchExt = Usagewatch
   elsif OS =~ /cygwin|mswin|mingw|bccwin|wince|emx/
     puts "Windows" + text

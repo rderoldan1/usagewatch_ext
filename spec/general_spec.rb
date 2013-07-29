@@ -68,4 +68,13 @@ describe 'TopMEMUsage' do
   end
 end
 
+describe 'HTTPConns' do
+  it 'should be the number of current apache connections' do
+    a = Usagewatch.uw_httpconns
+    a.class.should be Fixnum
+    a.should_not be_nil
+    a.should be >= 0
+  end
+end
+
 

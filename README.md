@@ -38,6 +38,7 @@ usw.uw_diskioreads
 usw.uw_diskiowrites
 usw.uw_cputop
 usw.uw_memtop
+usw.uw_apacheconns
 ```
 
 ## Example
@@ -100,6 +101,7 @@ Top Ten Processes By Memory Consumption: [["WebProcess", "8.3"], ["rubymine", "6
     uw_diskiowrites
     uw_cputop
     uw_memtop
+    uw_httpconns
 
 ##### Mac
     uw_diskused
@@ -109,29 +111,33 @@ Top Ten Processes By Memory Consumption: [["WebProcess", "8.3"], ["rubymine", "6
     uw_load
     uw_cpuused
     uw_memused
+    usw.uw_httpconns
 
 
 ## Notes
 
-Disk Used is a sum of all partitions calculated in Gigabytes
+* Disk Used is a sum of all partitions calculated in Gigabytes
 
-Disk Used Percentage is a total percentage of all disk partitions used
+* Disk Used Percentage is a total percentage of all disk partitions used
 
-CPU Used is a percentage of current CPU being used
+* CPU Used is a percentage of current CPU being used
 
-TCP/UDP Connections Used is a total count of each respectively
+* TCP/UDP Connections Used is a total count of each respectively
 
-Active Memory Used is a percentage of active system memory being used
+* Active Memory Used is a percentage of active system memory being used
 
-Load is the average load of the past minute
+* Load is the average load of the past minute
 
-Bandwidth is current received and transmitted in Megabits
+* Bandwidth is current received and transmitted in Megabits
 
-Disk IO is current disk reads and writes completed per second
+* Disk IO is current disk reads and writes completed per second
 
-Top Ten Processes By CPU Consumption are based on percent CPU used
+* Top Ten Processes By CPU Consumption are based on percent CPU used
 
-Top Ten Processes By Memory Consumption are base on percent Memory used
+* Top Ten Processes By Memory Consumption are base on percent Memory used
+
+* HTTP Conns is the number of connections on 80 port
+
 
 ## Tested Using
 
