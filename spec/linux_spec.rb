@@ -55,13 +55,4 @@ if OS.include? "linux"
       a.should be >= 0
     end
   end
-
-  describe 'ApacheConns' do
-    it 'should be the number of current apache connections' do
-      a = Usagewatchuw_httpconns
-      a.class.should be Fixnum
-      a.should_not be_nil
-      a.should be >= 0
-    end
-  end
 end
