@@ -1,4 +1,4 @@
 module UsagewatchExt
-  VERSION = "0.0.4.pre1"
+  VERSION = "0.1.0"
   OS = RUBY_PLATFORM
 end
