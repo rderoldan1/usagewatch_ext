@@ -111,7 +111,9 @@ Top Ten Processes By Memory Consumption: [["WebProcess", "8.3"], ["rubymine", "6
     uw_load
     uw_cpuused
     uw_memused
-    usw.uw_httpconns
+    uw_httpconns
+    uw_bandrx
+    uw_bandtx
 
 
 ## Notes
@@ -143,6 +145,7 @@ Top Ten Processes By Memory Consumption: [["WebProcess", "8.3"], ["rubymine", "6
 
 RUBY VERSIONS:
 ruby 1.9.3p429 (2013-05-15) [x86_64-linux]
+ruby 2.0
 
 OS VERSIONS:
 CENTOS 5x 6x, Ubuntu 12.04, Fedora 18, Mountain Lion 10.8.4

@@ -72,15 +72,19 @@ module Usagewatch
     cpu
   end
 
-  #todo
-  #def uw_bandrx
-  #
-  #end
+  def self.uw_bandrx
+    read1 =`netstat -ib | grep -e "en1" -m 1 | awk '{print $7}'`
+    sleep 1
+    read2=`netstat -ib | grep -e "en1" -m 1 | awk '{print $7}'`
+    (((read2.to_f - read1.to_f)/1024)/1024).round(3)
+  end
 
-  #todo
-  #def uw_bandtx
-  #
-  #end
+  def self.uw_bandtx
+    send1=`netstat -ib | grep -e "en1" -m 1 | awk '{print $10}'`
+    sleep 1
+    send2=`netstat -ib | grep -e "en1" -m 1 | awk '{print $10}'`
+    (((send2.to_f - send1.to_f)/1024)/1024).round(3)
+  end
 
   #todo
   #def uw_diskioreads
