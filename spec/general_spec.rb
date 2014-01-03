@@ -17,6 +17,32 @@ describe 'DiskUsage' do
   end
 end
 
+describe 'DiskUsage_on' do
+  it "should be the GB of disk used on root partition" do
+    a = Usagewatch.uw_diskused_on("/")
+    a.class.should be(Float)
+    a.should_not be_nil
+    a.should be >= 0
+  end
+end
+
+describe 'DiskAvailable' do
+  it "should be the GB of disk available" do
+    a = Usagewatch.uw_diskavailable
+    a.class.should be(Float)
+    a.should_not be_nil
+  end
+end
+
+describe 'DiskAvailable_on' do
+  it "should be the GB of disk used on root partition" do
+    a = Usagewatch.uw_diskavailable_on("/")
+    a.class.should be(Float)
+    a.should_not be_nil
+  end
+end
+
+
 describe 'CPUUsage' do
   it "should be the percentage of cpu used" do
     a = Usagewatch.uw_cpuused
@@ -76,5 +102,3 @@ describe 'HTTPConns' do
     a.should be >= 0
   end
 end
-
-
