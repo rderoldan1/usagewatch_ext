@@ -83,7 +83,7 @@ Mac version is under development
 Top Ten Processes By CPU Consumption: [["PluginProcess", "9.0"], ["WindowServer", "2.7"], ["iPhoto", "1.2"], ["Terminal", "1.0"], ["rubymine", "0.5"], ["SystemUIServer", "0.1"], ["(scanunit)", "0.0"], ["(scanunit)", "0.0"], ["(scanunit)", "0.0"], ["(scanunit)", "0.0"]]
 Top Ten Processes By Memory Consumption: [["WebProcess", "8.3"], ["rubymine", "6.4"], ["Safari", "2.0"], ["iPhoto", "1.8"], ["Mail", "1.7"], ["mds", "1.6"], ["ruby", "1.5"], ["WindowServer", "1.3"], ["PluginProcess", "1.2"], ["GitHub", "1.1"]]
 ```
- 
+
 Simple sinatra app for monitoring your server
 https://github.com/rderoldan1/ServerMonit
 
@@ -91,7 +91,10 @@ https://github.com/rderoldan1/ServerMonit
 
 ##### Linux
     uw_diskused
+    uw_diskused_on(location)
     uw_diskused_perc
+    uw_diskavailable
+    uw_diskavailable_on(location)
     uw_cpuused
     uw_tcpused
     uw_udpused
@@ -107,7 +110,10 @@ https://github.com/rderoldan1/ServerMonit
 
 ##### Mac
     uw_diskused
+    uw_diskused_on(location)
     uw_diskused_perc
+    uw_diskavailable
+    uw_diskavailable_on(location)
     uw_cputop
     uw_memtop
     uw_load
@@ -123,6 +129,12 @@ https://github.com/rderoldan1/ServerMonit
 * Disk Used is a sum of all partitions calculated in Gigabytes
 
 * Disk Used Percentage is a total percentage of all disk partitions used
+
+* Disk Used On is disk space used on the location passed calculated in Gigabytes, returns "location invalid" if invalid location passed
+
+* Disk Available is a sum of all partitions calculated in Gigabytes
+
+* Disk Available On is disk space available on the location passed calculated in Gigabytes, returns "location invalid" if invalid location passed
 
 * CPU Used is a percentage of current CPU being used
 
