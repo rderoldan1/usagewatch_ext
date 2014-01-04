@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 #License: (MIT), Copyright (C) 2013 Author Phil Chen, Contributor Ruben Espinosa
 
