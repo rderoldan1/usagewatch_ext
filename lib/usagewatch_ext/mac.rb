@@ -28,7 +28,6 @@ module Usagewatch
 
   # Show disk space available in GB
   def self.uw_diskavailable
-    puts "new code"
     df = `df -kl`
     sum = 0.00
     df.each_line.with_index do |line, line_index|
@@ -37,7 +36,7 @@ module Usagewatch
       next if line[0] =~ /localhost/  #ignore backup filesystem
       sum += ((line[3].to_f)/1024)/1024
     end
-    sum.round(2)
+    totaldiskavailable = sum.round(2)
   end
 
   # Show disk space available on location(partition) in GB
