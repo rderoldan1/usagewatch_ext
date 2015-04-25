@@ -28,6 +28,7 @@ module Usagewatch
 
   # Show disk space available in GB
   def self.uw_diskavailable
+    puts "new code"
     df = `df -kl`
     sum = 0.00
     df.each_line.with_index do |line, line_index|
